@@ -33,19 +33,32 @@ if __name__ == '__main__':
     draw_background()
 
     # TODO 1) Create an empty list of turtles
+    t = []
 
     # TODO 2) Create a new turtle and set its shape to 'turtle
-
+    for i in range (8):
+        ellie = turtle.Turtle()
     # TODO 3) Set the turtle's speed to 3
-
+        ellie.speed(3)
     # TODO 4) Set the turtle's pen up
-
+        ellie.penup()
     # TODO 5) Use the turtle's goto() method to set its position on the left
     #  side of the screen
+        ellie.goto(-415,i*55-200)
+        t.append(ellie)
+
+    racing = True
+
+    while racing:
+        for i in range (len(t)):
+            t[i].forward(random.randint(1,20))
+            if t.xcor(350):
+
 
     # TODO 6) use a loop to repeat the previous instructions and create
     #  8 turtles lined up on the left side of the screen
     #  *HINT* click on the window to print the corresponding x, y location
+
 
     # TODO 7) Move each turtle forward a random distance between 1 and 20
 
