@@ -4,7 +4,7 @@ Demonstration of object constructors
 
 # Classes can have variables that "belong" to an object created from the
 # class. These variables can only be used when an object is created from
-# the class. For example:
+# the class.                For example:
 student_name = "Kevin"
 
 class Student:
@@ -13,7 +13,7 @@ class Student:
 
 # * The variable 'student_name' can be used anywhere in the file
 # * The variable 'name' within the class Student can only be used outside the
-#   class if an object of Student is created
+#   class if an object of Student is c          reated
 print(student_name)         # No error. Prints Kevin
 # print(name)               # ERROR, name variable not defined outside of class
 student_1 = Student("Javier")

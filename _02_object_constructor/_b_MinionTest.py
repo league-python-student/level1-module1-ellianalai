@@ -3,6 +3,9 @@ Create a Minion class to make all the MinionTests pass
 """
 import unittest
 
+class Minion:
+    def __init__(self, name,eyes,color,master):
+        Minion('stuart', ,)
 
 # TODO 1) Run this MinionTest class. Notice the run tab at the bottom says,
 #  "Tests failed". This is because the tests do not run successfully. Check

@@ -3,7 +3,10 @@ Turtle Race
 """
 import turtle
 import random
+from tkinter import messagebox
+
 from PIL import Image
+
 
 # ================= Instructions at the bottom of this file ===================
 
@@ -26,6 +29,7 @@ def draw_background():
     window.bgpic(filename)
     window.onclick(screen_clicked)
 
+
 # ====================== DO NOT EDIT THE CODE ABOVE ===========================
 
 
@@ -36,29 +40,31 @@ if __name__ == '__main__':
     t = []
 
     # TODO 2) Create a new turtle and set its shape to 'turtle
-    for i in range (8):
+    for i in range(8):
         ellie = turtle.Turtle()
-    # TODO 3) Set the turtle's speed to 3
+        # TODO 3) Set the turtle's speed to 3
         ellie.speed(3)
-    # TODO 4) Set the turtle's pen up
+        # TODO 4) Set the turtle's pen up
         ellie.penup()
-    # TODO 5) Use the turtle's goto() method to set its position on the left
-    #  side of the screen
-        ellie.goto(-415,i*55-200)
+        # TODO 5) Use the turtle's goto() method to set its position on the left
+        #  side of the screen
+        ellie.goto(-415, i * 55 - 200)
         t.append(ellie)
 
     racing = True
 
     while racing:
-        for i in range (len(t)):
-            t[i].forward(random.randint(1,20))
-            if t.xcor(350):
+        for i in range(len(t)):
+            t[i].forward(random.randint(1, 20))
+            if t[i].xcor() > 349:
+                messagebox.showinfo(title='', message=str(8-i ) + ' turtle won!')
+                racing = False
+                break
 
 
     # TODO 6) use a loop to repeat the previous instructions and create
     #  8 turtles lined up on the left side of the screen
     #  *HINT* click on the window to print the corresponding x, y location
-
 
     # TODO 7) Move each turtle forward a random distance between 1 and 20
 
