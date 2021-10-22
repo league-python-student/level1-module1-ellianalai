@@ -5,8 +5,10 @@ import unittest
 
 class Minion:
     def __init__(self, name,eyes,color,master):
-        Minion('stuart', ,)
-
+        self.name = name
+        self.eyes = eyes
+        self.color = color
+        self.master = master
 # TODO 1) Run this MinionTest class. Notice the run tab at the bottom says,
 #  "Tests failed". This is because the tests do not run successfully. Check
 #  the error message is "NameError: name 'Minion' is not defined" at the

@@ -50,4 +50,12 @@ if __name__ == '__main__':
     # TODO 5) Print all the movies in your queue.
     # TODO 6) Use your NetflixQueue object to finish the sentence "the best movie is...."
     # TODO 7) Use your NetflixQueue to finish the sentence "the second best movie is...."
+    harry_potter = Movie('Harry Potter',5)
+    print(harry_potter.get_ticket_price())
+    parent_trap = Movie('Parent Trap', 5)
+    mickey_mouse = Movie ('Mickey Mouse', 1.5)
+    iron_man = Movie('Iron Man', 4.5)
+    abomindable = Movie('abomindable', 4.75)
+
+
 
