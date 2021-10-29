@@ -1,19 +1,26 @@
 
 def setup():
+    pass
     # 1. Use the size function to set the size of your sketch
-
+    size(475,500)
     # 2. Create 2 global variables for the background and the frog
     # using the loadImage("frog.png") function. For example:
-    # global bg, frog
-    # bg = loadImage("froggerBackground.png")
-    
+    global bg, frog
+    bg = loadImage("froggerBackground.png")
+    frog = loadImage("frog.png")
+    setup global frog_x
+    setup global frog_y
     # 3. Use the resize method to set the size of the background variable
     # to the width and height of the sketch. Resize the frog to an
     # appropriate size.
-    
+    bg.resize(475,500)
+    frog.resize(80,75)
 def draw():
+    pass
     # 4. Use the background function to draw the background
     
+    background(bg)
+    image(frog,global frog_x,global frog_y)
     # 5. Use the image function to draw the frog.
     # Run the program and check the background and frog are displayed.
 
@@ -21,7 +28,7 @@ def draw():
     # and use them when drawing the frog. You will also have to put the
     # following in the draw function:
     # global frog_x, frog_y
-    
+   
     # 7. Use the Car class below to create a global car object in the
     # setup function and call the update and draw functions here.
     
