@@ -6,10 +6,15 @@ def setup():
     size(475,500)
     # 2. Create 2 global variables for the background and the frog
     # using the loadImage("frog.png") function. For example:
-    global bg, frog, frog_x, frog_y, hi
-    hi = Car(20,100,150,20)
+    global bg, frog, frog_x, frog_y, hi,bye,adios,hola,d
+    hi = Car(20,100,150,5)
+    bye = Car(20,160,150,10)
+    adios = Car(20,220,150,7)
+    hola = Car(20,280,150,4)
+    d = [hi, bye, adios,hola]
+   
     frog_x = 290
-    frog_y = 120
+    frog_y = 350
     
     bg = loadImage("froggerBackground.png")
     frog = loadImage("frog.png")
@@ -20,8 +25,9 @@ def setup():
     frog.resize(20,25)
 def draw():
     pass
+   
     # 4. Use the background function to draw the background
-    intersect()
+
     background(bg)
     image(frog,frog_x,frog_y)
     # 5. Use the image function to draw the frog.
@@ -29,11 +35,21 @@ def draw():
     
     hi.draw()
     hi.update()
+    bye.draw()
+    bye.update()
+    adios.draw()
+    adios.update()
+    hola.draw()
+    hola.update()
+    intersect()
+            
+        
 def intersect():
-    global frog_x,frog_y
-    if frog_x + frog.width >hi.x and frog_x <hi.x +hi.length and frog_y+frog.height>hi.y and frog_y <hi.y +hi.length:
-        frog_x = 200
-        frog_y = 120
+    for i in d:
+        global frog_x,frog_y
+        if frog_x + frog.width >i.x and frog_x <i.x +i.length and frog_y+frog.height>i.y and frog_y <i.y +i.length/3:
+            frog_x = 200
+            frog_y = 350
     # 6. Create global frog_x and frog_y variables in the setup function
     # and use them when drawing the frog. You will also have to put the
     # following in the draw function:
@@ -55,11 +71,11 @@ def keyPressed():
     if key == CODED:
         if keyCode == UP:
             frog_y -= 5
-        if ketCode == DOWN:
+        if keyCode == DOWN:
             frog_y+= 5
-        if keyCode == Left:
+        if keyCode == LEFT:
             frog_x -= 5
-        if keyCode == Right:
+        if keyCode == RIGHT:
             frog_x += 5
             
 
