@@ -9,11 +9,13 @@ started = False
 def setup():
     pass
     # 1. Set the size of your window to at least width = 800, height = 600
-
+    size(800,600)
     # 2. Make a global ball variable, for example:
-    
+    global ball_1,paddle_1
     # 3. Initialize your ball variable to a new Ball(), for example:
-    
+    ball_1 = Ball()
+    paddle_1 = Paddle(100,200)
+
     # 4. Make a global paddle variable.
     
     # 5. Initialize your paddle variable to a new Paddle() for example:
@@ -24,7 +26,11 @@ def draw():
         fill(0)
         text("Press 's' to start", width/3, height/2)
         return
-    
+    background(0)
+    ball_1.draw()
+    ball_1.update()
+    paddle_1.draw()
+    paddle_1.update()
     # 6. Use the background() function to set the background color.
     #    background(0) will set a classic black background
 
@@ -60,7 +66,10 @@ def keyPressed():
         started = True 
     elif key == CODED:
         if keyCode == LEFT:
-            
+            paddle_1.x_speed -=5
+        if keyCode == RIGHT:
+            paddle_1.x_speed+=5
+       
             pass
 
 
