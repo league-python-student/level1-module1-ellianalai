@@ -13,8 +13,8 @@ def setup():
     # 2. Make a global ball variable, for example:
     global ball_1,paddle_1
     # 3. Initialize your ball variable to a new Ball(), for example:
-    ball_1 = Ball()
-    paddle_1 = Paddle(100,200)
+    ball_1 = Ball(400)
+    paddle_1 = Paddle(100,570)
 
     # 4. Make a global paddle variable.
     
@@ -31,6 +31,8 @@ def draw():
     ball_1.update()
     paddle_1.draw()
     paddle_1.update()
+    ball_1.collision(paddle_1)
+    if ball_1 == ()
     # 6. Use the background() function to set the background color.
     #    background(0) will set a classic black background
 
@@ -39,11 +41,11 @@ def draw():
 
     # 8. Call the paddle object's update() and draw() methods.
     #    Do you see the paddle on the screen?
-
+    
     # 11. Finish the code in keyPressed() and keyReleased() first!
     #     Call the ball object's collision() method and pass the
     #     paddle object as an input variable.
-    #     Does the ball bounce off the paddel?
+    #     Does the ball bounce off the paddle?
 
     # 12. End the game when the ball goes below the bottom of the screen.
     #     You can use noLoop() to freeze the game and text() to print text
@@ -77,4 +79,8 @@ def keyPressed():
 #     Does the paddle stop when the keys are released?
 def keyReleased():
     if key == CODED:
+        if keyCode == LEFT:
+            paddle_1.x_speed = 0
+        if keyCode == RIGHT:
+            paddle_1.x_speed = 0
         pass
