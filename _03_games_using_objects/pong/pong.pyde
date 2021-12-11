@@ -22,7 +22,7 @@ def setup():
     
 def draw():
     if not started:
-        textSize(32)
+        textSize(50)
         fill(0)
         text("Press 's' to start", width/3, height/2)
         return
@@ -32,7 +32,11 @@ def draw():
     paddle_1.draw()
     paddle_1.update()
     ball_1.collision(paddle_1)
-    if ball_1 == ()
+    if ball_1.y > 605:
+        fill('#FFFFFF')
+        text('Game over',300,300 )
+        noLoop()
+        
     # 6. Use the background() function to set the background color.
     #    background(0) will set a classic black background
 
